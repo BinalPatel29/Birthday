@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Sora:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================= -->
+<!-- NAV -->
+<!-- ============================================= -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">Happy Birthday<span class="nav-logo-dot">.</span></a>
+    <div class="nav-links">
+      <a href="#profile">Profile</a>
+      <a href="#memories">Memories</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================= -->
+<!-- HERO — terminal boot sequence -->
+<!-- ============================================= -->
+<header id="hero" class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="terminal" id="terminal">
+      <div class="terminal-bar">
+        <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+        <span class="terminal-title">birthday</span>
+      </div>
+      <div class="terminal-body" id="terminalBody" aria-live="polite"></div>
+    </div>
+
+    <div class="reveal" id="reveal">
+      <p class="reveal-eyebrow">SYSTEM ANNOUNCEMENT</p>
+      <h1 class="reveal-title">
+        <span class="js-name">My Special One ❤️🫶</span> just hit
+        <span class="reveal-age js-age">Level 22</span>
+      </h1>
+      <p class="reveal-sub js-tagline">Thank you for being a part of my life 😘.</p>
+      <button class="btn-run" id="runCelebration">
+        <span class="btn-run-icon">▶</span> celebrate 🥂
+      </button>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true">
+    <span>scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</header>
+
+<canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+<!-- ============================================= -->
+<!-- PROFILE / STATS -->
+<!-- ============================================= -->
+<section id="profile" class="section profile">
+  <div class="section-inner">
+    <p class="section-eyebrow">// 01 — player profile</p>
+    <h2 class="section-title">Birthday 🐥</h2>
+
+    <div class="profile-grid">
+      <div class="profile-card">
+        <div class="avatar js-avatar-initials" aria-hidden="true">AB</div>
+        <h3 class="js-name">My Special One ❤️🫶</h3>
+        <p class="profile-class js-title">Dear Best Friend</p>
+        <p class="profile-quote js-bio">"Happy birthday to someone who makes the world a better place just by being in it."</p>
+      </div>
+
+      <div class="stats-card">
+        <h3 class="stats-heading">Relationship</h3>
+        <ul class="stats-list" id="statsList">
+          <!-- Populated by script.js from CONFIG.interests -->
+        </ul>
+      </div>
+    </div>
+
+    <div class="badges" id="badgeRow">
+      <!-- Populated by script.js from CONFIG.badges -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================= -->
+<!-- GALLERY / MEMORY LOG -->
+<!-- ============================================= -->
+<section id="memories" class="section memories">
+  <div class="section-inner">
+    <p class="section-eyebrow">// 02 — memory log</p>
+    <h2 class="section-title">Friendship Memories</h2>
+    <p class="section-lede">Old but gold memories</p>
+
+    <div class="memory-grid" id="memoryGrid">
+      <!-- Populated by script.js from CONFIG.memories -->
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Memory detail" hidden>
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+  <div class="lightbox-content">
+    <div class="lightbox-media" id="lightboxMedia"></div>
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+</div>
+
+
+
+<footer class="footer">
+  <p>Built with care for a very specific human. <span class="footer-heart">♥</span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
